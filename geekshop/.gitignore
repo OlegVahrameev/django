@@ -1,0 +1,4 @@
+run.bat
+migrate.bat
+db.sqlite3
+sqlite3.exe
