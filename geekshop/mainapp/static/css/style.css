@@ -1,3 +1,7 @@
 .main {
     color: red;
 }
+
+.active {
+    background-color: lightgreen;
+}

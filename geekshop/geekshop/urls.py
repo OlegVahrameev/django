@@ -17,10 +17,17 @@ from django.contrib import admin
 from django.conf.urls import url
 import mainapp.views as mainapp
 from django.urls import path
+from django.conf import settings
+from django.conf.urls.static import static
+from django.conf.urls import include
+
 
 urlpatterns = [
     url(r'^$', mainapp.main, name='index'),
-    url(r'^products/', mainapp.products, name='products'),
-    url(r'^contacts/', mainapp.contacts, name='contacts'),
+    url(r'^products/', include( 'mainapp.urls' , namespace= 'products' )),
+    url(r'^contacts/$', mainapp.contacts, name='contacts'),
     url(r'^admin/', admin.site.urls),
 ]
+
+if settings.DEBUG:
+    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
