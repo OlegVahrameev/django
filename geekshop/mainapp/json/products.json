@@ -1,0 +1,14 @@
+[
+  {
+    "category": "WLC",
+    "name": "Cisco Catalyst 9800-40",
+    "price": 10000,
+    "quantity": 10
+  },
+  {
+    "category": "WAP",
+    "name": "Cisco Aironet 4800",
+    "price": 1000,
+    "quantity": 100
+  }
+]

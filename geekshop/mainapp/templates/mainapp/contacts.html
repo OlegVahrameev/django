@@ -1,0 +1,13 @@
+{% extends 'mainapp/base.html' %}
+{% load static %}
+
+{% block title %}
+    <title>Контакты</title>
+{% endblock %}
+{% block content %}
+    {% include 'mainapp/includes/inc_menu.html' %}
+    <h1>Контакты</h1>
+    {% now "d.m.Y" %}
+    <br>
+    <img src="{% static 'img/paradise.jpg' %}">
+{% endblock %}
