@@ -4,7 +4,7 @@ from .models import Product
 def main (request):
     product_list = Product.objects.all()
 
-    return render(request, 'mainapp/index.html', context={'user':{'name': 'oleg', 'surname': 'vahrameev'}, 'products': product_list})
+    return render(request, 'mainapp/index.html', context={'user': request.user, 'products': product_list})
 
 def products (request, pk=None):
     print(pk)
